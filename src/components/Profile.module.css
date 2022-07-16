@@ -1,0 +1,16 @@
+.content {
+    grid-area: c;
+    background-color: darkgoldenrod;
+}
+
+.item {
+    color: green;
+}
+
+.imges {
+    width: 1000px;
+}
+
+.ava img {
+    width: 100px;
+}
