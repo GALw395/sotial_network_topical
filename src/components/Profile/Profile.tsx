@@ -1,3 +1,4 @@
+import MyPosts from './MyPosts/MyPosts';
 import classes from './Profile.module.css';
 
 
@@ -12,16 +13,7 @@ const Profile = () => {
                 ava + description
                 <img src="https://cdnb.artstation.com/p/assets/covers/images/045/154/127/large/thibaut-granet-thibaut-granet-template-artstation-jinx.jpg?1642036430" alt="#" />
             </div>
-            <div>
-                My posts
-                <div>
-                    New post
-                </div>
-                <div className={classes.posts}>
-                    <div className={classes.item}>post 1</div>
-                    <div className={classes.item}>post 2</div>
-                </div>
-            </div>
+            <MyPosts />
 
         </div>
     )
