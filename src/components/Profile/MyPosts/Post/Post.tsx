@@ -9,7 +9,7 @@ const Post = (props: any) => {
             <img src="https://cdnb.artstation.com/p/assets/covers/images/045/154/127/large/thibaut-granet-thibaut-granet-template-artstation-jinx.jpg?1642036430" alt="#" />
             {props.message}
             <div>
-                <span>Like: {props.like}</span>
+                <span>Like: {props.likesCount}</span>
             </div>
         </div>
 
