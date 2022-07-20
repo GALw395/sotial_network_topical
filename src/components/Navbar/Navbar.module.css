@@ -1,4 +1,5 @@
 .nav {
+    padding: 20px;
     grid-area: n;
     background-color: burlywood;
 }
@@ -8,7 +9,6 @@
     text-decoration: none;
 }
 
-.item.active a {
+.item a.active {
     color: gold;
-    text-decoration: none;
 }
