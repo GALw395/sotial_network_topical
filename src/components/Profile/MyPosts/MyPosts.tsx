@@ -6,15 +6,17 @@ const MyPosts = () => {
 
     return (
 
-        <div>
-            My posts
+        <div className={classes.postsBlock}>
+            <h3>My posts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+
+                <div><textarea></textarea></div>
+                <div><button>Add post</button></div>
+
             </div>
             <div className={classes.posts}>
-                <Post message='Hi, how are you?' likesCount='15'/>
-                <Post message='My first post' likesCount='20'/>
+                <Post message='Hi, how are you?' likesCount='15' />
+                <Post message='My first post' likesCount='20' />
             </div>
         </div>
 
