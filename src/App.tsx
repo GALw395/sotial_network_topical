@@ -12,8 +12,8 @@ function App() {
       <Header />
       <Navbar />
       <Routes>
-        <Route path='/profile' element={<Profile />}></Route>
-        <Route path='/dialogs' element={<Dialogs />}></Route>
+        <Route path='/profile/*' element={<Profile />}></Route>
+        <Route path='/dialogs/*' element={<Dialogs />}></Route>
         <Route path='/news' element={<Dialogs />}></Route>
         <Route path='/music' element={<Dialogs />}></Route>
         <Route path='/settings' element={<Dialogs />}></Route>
