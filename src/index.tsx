@@ -4,27 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import state from './redux/state';
 
-
-let posts = [
-  { id: 1, message: 'Hi, how are you?', likesCount: 15 },
-  { id: 2, message: 'My first post?', likesCount: 20 },
-  { id: 3, message: 'Bla bla bla', likesCount: 5 }
-]
-
-let dialogs = [
-  { id: 1, name: 'Alex' },
-  { id: 2, name: 'Lera' },
-  { id: 3, name: 'Tania' },
-  { id: 4, name: 'Marina' },
-  { id: 5, name: 'Nixie' }
-]
-
-let messages = [
-  { id: 1, message: 'Hi!' },
-  { id: 2, message: 'Bla bla' },
-  { id: 3, message: 'Hi Nixie.' }
-]
 
 
 const root = ReactDOM.createRoot(
@@ -33,7 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App posts={posts} dialogs={dialogs} messages={messages} />
+      <App state={state} />
     </BrowserRouter>
   </React.StrictMode>
 );

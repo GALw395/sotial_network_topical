@@ -13,8 +13,8 @@ function App(props: any) {
       <Header />
       <Navbar />
       <Routes>
-        <Route path='/profile/*' element={<Profile posts={props.posts} />}></Route>
-        <Route path='/dialogs/*' element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}></Route>
+        <Route path='/profile/*' element={<Profile state={props.state.profilePage} />}></Route>
+        <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />}></Route>
         <Route path='/news' element={<Dialogs />}></Route>
         <Route path='/music' element={<Dialogs />}></Route>
         <Route path='/settings' element={<Dialogs />}></Route>
