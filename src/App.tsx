@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 
+
 function App(props: any) {
 
   return (
@@ -13,7 +14,7 @@ function App(props: any) {
       <Header />
       <Navbar />
       <Routes>
-        <Route path='/profile/*' element={<Profile state={props.state.profilePage} />}></Route>
+        <Route path='/profile/*' element={<Profile state={props.state.profilePage} addPost={props.addPost}/>}></Route>
         <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />}></Route>
         <Route path='/news' element={<Dialogs />}></Route>
         <Route path='/music' element={<Dialogs />}></Route>
