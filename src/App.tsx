@@ -15,7 +15,7 @@ function App(props: any) {
       <Navbar />
       <Routes>
         <Route path='/profile/*' element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}></Route>
-        <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />}></Route>
+        <Route path='/dialogs/*' element={<Dialogs store={props.store} />}></Route>
         <Route path='/news' element={<Dialogs />}></Route>
         <Route path='/music' element={<Dialogs />}></Route>
         <Route path='/settings' element={<Dialogs />}></Route>
