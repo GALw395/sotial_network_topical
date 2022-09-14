@@ -29,26 +29,39 @@ let store = {
 
 
     },
-    getState() {
-        return this._state;
-    },
     _callSubscriber(props: any) {
         console.log('loding');
+    },
 
-    },
-    addPost() {
-        let newPost = { id: 4, message: this._state.profilePage.newPostText, likesCount: 0 }
-        this._state.profilePage.posts.push(newPost)
-        this._state.profilePage.newPostText = ''
-        this._callSubscriber(this._state)
-    },
-    updateNewPostText(newText: any) {
-        this._state.profilePage.newPostText = newText
-        this._callSubscriber(this._state)
+    getState() {
+        return this._state;
     },
     subscribe(observer: any) {
         this._callSubscriber = observer
     },
+
+    // _addPost() {
+    //     let newPost = { id: 4, message: this._state.profilePage.newPostText, likesCount: 0 }
+    //     this._state.profilePage.posts.push(newPost)
+    //     this._state.profilePage.newPostText = ''
+    //     this._callSubscriber(this._state)
+    // },
+    // _updateNewPostText(newText: any) {
+    //     this._state.profilePage.newPostText = newText
+    //     this._callSubscriber(this._state)
+    // },
+    dispatch(action: any) {
+        if (action.type === 'ADD-POST') {
+            let newPost = { id: 4, message: this._state.profilePage.newPostText, likesCount: 0 }
+            this._state.profilePage.posts.push(newPost)
+            this._state.profilePage.newPostText = ''
+            this._callSubscriber(this._state)
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText
+            this._callSubscriber(this._state)
+        }
+    },
+
 }
 
 
